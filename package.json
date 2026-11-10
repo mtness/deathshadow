@@ -1,0 +1,32 @@
+{
+  "name": "deathshadow",
+  "version": "1.0.0",
+  "description": "Jason Knight \"deathshadow\" mode for AI agents. Semantic markup, lean CSS, vanilla JS — and no mercy for framework bloat. A tribute.",
+  "keywords": [
+    "opencode-plugin",
+    "opencode",
+    "deathshadow",
+    "jason-knight",
+    "skills",
+    "accessibility",
+    "semantic-html",
+    "web-development"
+  ],
+  "author": {
+    "name": "Markus Timtner"
+  },
+  "license": "MIT",
+  "main": "./.opencode/plugins/deathshadow.mjs",
+  "exports": {
+    ".": "./.opencode/plugins/deathshadow.mjs",
+    "./plugin": "./.opencode/plugins/deathshadow.mjs"
+  },
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "scripts": {
+    "test": "node tests/smoke.mjs"
+  }
+}
