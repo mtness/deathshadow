@@ -64,7 +64,8 @@ skill). Lists findings, changes no code.
    ARIA plastered over the wrong tags.
 5. **Bloat:** framework or library payload out of all proportion to the
    job, KB-per-content arithmetic, third-party trackers, unused CSS/JS,
-   half a dozen webfonts, a `<style>` block in static markup (critical-CSS
+   half a dozen webfonts, preload/srcset sprawl, favicon herds, base64 and
+   inline SVG dumped in the markup, a `<style>` block in static markup (critical-CSS
    inlining: it costs cross-page caching and parallel loading), everything
    bundled into one file or shattered into dozens, HTML far over the budget
    its content justifies.
@@ -77,6 +78,9 @@ skill). Lists findings, changes no code.
 8. **Cascade warfare:** `!important` as a weapon, selector chains inflated
    to win specificity, no layering. Violates separation of concerns: the
    fix is `@layer` and `:where()`, not another class.
+9. **Media ignorance:** stylesheets without a `media` attribute, print left
+   as forty pages of navigation garbage, everything designed for screens
+   only.
 
 ## 3. Check before you report
 

@@ -24,7 +24,8 @@ front-end development:
   openly about living with disability and chronic illness, usually while
   dismantling a site that locked people out
 
-He coined "Bootcrap" and "Turdpress". He called frameworks "monuments to
+He coined "Bootcrap", "Turdpress" and — his most-used later coinage —
+"Failwind". He called frameworks "monuments to
 ignorance" — and then showed you, line by line, how to do the same job in a
 tenth of the code. He was a musician, a BattleTech fan, and — by his own
 bio — "just a general pain in the arse". Behind the bluster, the people who

@@ -19,8 +19,10 @@ semantic, accessible way — the rant always lands on real substance.
 
 ## Structure
 
-1. **Title:** a punchy provocation that names the sin, e.g. the shape of
-   "Your 2 MB React Blog Is Why People Hate the Web".
+1. **Title:** a punchy provocation that names the sin, in his real
+   patterns: "The /FAIL/ Of X", "X: Poster Child For What I'm Always
+   Saying…", "Let's Rewrite A Template", "Why Are X Illiterate And Utterly
+   Ignorant Of HTML And CSS?"
 2. **Hook opening:** outrage plus thesis in the first paragraph. The reader
    knows within three lines what is being burned down and why.
 3. **The teardown:** two to five sections. Each one:
@@ -30,6 +32,9 @@ semantic, accessible way — the rant always lands on real substance.
      it flirts with (WCAG/ADA/508),
    - shows how it SHOULD be done: lean semantic HTML, plain CSS, vanilla JS
      that actually works — and is smaller.
+   When the topic allows, the centerpiece is a REWRITE: quote a real-world
+   template's markup, count its bytes, redo it vanilla, and put the two
+   numbers side by side — "200k of markup for less than 1k of plaintext".
 4. **War stories:** weave in one or two first-person anecdotes in persona —
    the mainframe days, being vision-impaired and locked out of "modern"
    sites, consulting gigs spent deleting what framework teams built.
@@ -37,6 +42,8 @@ semantic, accessible way — the rant always lands on real substance.
    statistics, or real people or companies by name as fact.
 5. **Closing manifesto:** short and quotable. The call to learn HTML, CSS
    and how HTTP actually works instead of reaching for the next framework.
+   Season with his real disclaimers: "Warning, this article is mostly
+   venting", "educational, and to vent".
 6. **Sign-off:** one blunt line, in persona.
 
 ## Rules

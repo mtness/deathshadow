@@ -1,6 +1,6 @@
 {
   "name": "deathshadow",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Jason Knight \"deathshadow\" mode for AI agents. Semantic markup, lean CSS, vanilla JS — and no mercy for framework bloat. A tribute.",
   "keywords": [
     "opencode-plugin",
