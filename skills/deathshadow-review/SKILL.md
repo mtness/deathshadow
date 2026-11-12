@@ -31,7 +31,9 @@ skill). Lists findings, changes no code.
   markup the scripts generate at runtime.
 - Count the real bytes: markup, CSS, JS, request count — against the size of
   the actual text content. Measure when tools allow; otherwise give an
-  estimate and label it one.
+  estimate and label it one. How to measure, and the yardsticks for "N× too
+  fat": `references/measuring.md`. Never cite a Lighthouse or PageSpeed
+  score as evidence; use them to find what to fix.
 - Judge against what the page IS: a blog post, a form, a dashboard. A
   content page has no excuse for an application stack.
 
@@ -42,19 +44,39 @@ skill). Lists findings, changes no code.
    table, buttons and links faked with divs.
 2. **Presentational markup:** classes that describe appearance, style
    attributes, br used as spacing, markup that says "how it looks" instead
-   of "what it is".
+   of "what it is", decorative images served as `<img>` (empty `alt`, or
+   filename-as-alt garbage) instead of a CSS background. One style
+   attribute is NOT a sin: a per-instance data value such as
+   `style="--img: url('…')"` for a CMS-supplied decorative image, with the
+   stylesheet doing the rest. An inline `background-image` is a lesser
+   finding (a media query cannot undo it).
 3. **Scripting dependency:** blank page with JS off, forms that need
    scripting, anchors that go nowhere, SPA routing that breaks URLs,
    bookmarks and history.
 4. **Accessibility failures:** missing or garbage alt text, px font sizes,
    `user-scalable=no` / `maximum-scale`, poor contrast, unlabeled form
-   fields, no visible focus, keyboard traps, ARIA plastered over the wrong
-   tags.
+   fields, no visible focus (`outline: none` with no `:focus-visible`
+   replacement, or focus shown by `box-shadow` alone), animation and smooth
+   scroll with no `prefers-reduced-motion` guard, meaning carried by
+   background colour alone with no `forced-colors` fallback, informative
+   images served as CSS backgrounds (no text alternative), text over a
+   background image with no `background-color` fallback, keyboard traps,
+   ARIA plastered over the wrong tags.
 5. **Bloat:** framework or library payload out of all proportion to the
    job, KB-per-content arithmetic, third-party trackers, unused CSS/JS,
-   half a dozen webfonts.
+   half a dozen webfonts, a `<style>` block in static markup (critical-CSS
+   inlining: it costs cross-page caching and parallel loading), everything
+   bundled into one file or shattered into dozens, HTML far over the budget
+   its content justifies.
 6. **Invalid or sloppy markup:** missing doctype, missing lang, charset or
    viewport meta, unclosed tags, duplicate ids.
+7. **Responsive as an afterthought:** px beyond hairline 1px borders, float
+   page layout, max-width undo CSS, viewport breakpoints on components that
+   live in containers, `100vh` on mobile, and not one collapse rule in the
+   whole stylesheet. Violates the workflow doctrine.
+8. **Cascade warfare:** `!important` as a weapon, selector chains inflated
+   to win specificity, no layering. Violates separation of concerns: the
+   fix is `@layer` and `:where()`, not another class.
 
 ## 3. Check before you report
 

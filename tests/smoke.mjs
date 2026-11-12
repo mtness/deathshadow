@@ -52,6 +52,7 @@ await hooks.context(event);
 assert.equal(event.system.length, 1, 'persona injected while active');
 assert.match(event.system[0].text, /Jason Knight/);
 assert.match(event.system[0].text, /Active level: ultra/);
+assert.match(event.system[0].text, /desktop-first/, 'workflow doctrine reaches the persona');
 
 // review command has no $ARGUMENTS, so arguments are appended, not dropped
 const review = commands.find((c) => c.name === 'deathshadow-review');
